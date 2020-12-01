@@ -1,0 +1,4 @@
+oc-test-1:
+  josh-family/everyone:
+    type: "group"
+    permission: "read"

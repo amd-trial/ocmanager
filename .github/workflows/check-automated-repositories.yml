@@ -1,0 +1,32 @@
+name: Check Automated Repositories
+
+on:
+  pull_request_target:
+    branches:
+    - 'master'
+    paths:
+    - "groups/*.yml"
+    - "groups/*.yaml"
+    - "repos/*.yml"
+    - "repos/*.yaml"
+  workflow_dispatch:
+
+jobs:
+  Update:
+    name: "Check"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Dependencies
+        run: |
+          sudo gem install octokit yaml
+      - name: Set Env Variables
+        run: |
+          echo "OUTSIDE_COLLABORATORS_GITHUB_ORG=${{ github.repository_owner }}" >> ${GITHUB_ENV}
+          echo "OUTSIDE_COLLABORATORS_GITHUB_TOKEN=${{ secrets.OUTSIDE_COLLABORATORS_TOKEN }}" >> ${GITHUB_ENV}
+      - uses: actions/checkout@master
+      - name: Run Handler
+        run: |
+          cd scripts
+          ./check-automated-repositories.rb
+      

@@ -1,0 +1,12 @@
+oc-test-3:
+  josh-family/everyone:
+    type: "group"
+    permission: "write"
+
+  jinshotmail:
+    type: "user"
+    permission: "read"
+    
+  dhruv-gupta-live:
+    type: "user"
+    permission: "write"
