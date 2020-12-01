@@ -1,4 +1,4 @@
 oc-test-1:
-  josh-family/everyone:
+  AMD-family/everyone:
     type: "group"
     permission: "read"
