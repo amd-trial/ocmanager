@@ -1,4 +1,4 @@
-Repo_TestSonarQube :
+Repo_TestSonarQube:
   AMD-family/everyone:
     type: "group"
     permission: "read"
