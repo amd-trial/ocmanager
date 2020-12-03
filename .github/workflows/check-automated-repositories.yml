@@ -28,5 +28,7 @@ jobs:
       - name: Run Handler
         run: |
           cd scripts
+          chmod +x *
           ./check-automated-repositories.rb
+          
       
