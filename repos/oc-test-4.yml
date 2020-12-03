@@ -1,8 +1,0 @@
-oc-test-4:
-  josh-family/alpha:
-    type: "group"
-    permission: "triage"
-
-  josh-family/beta:
-    type: "group"
-    permission: "write"
