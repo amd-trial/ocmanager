@@ -1,8 +1,0 @@
-oc-test-2:
-  josh-family/everyone:
-    type: "group"
-    permission: "read"
-
-  JoshF85:
-    type: "user"
-    permission: "maintain"
