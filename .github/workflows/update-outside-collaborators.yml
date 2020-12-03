@@ -28,5 +28,6 @@ jobs:
       - name: Run Handler
         run: |
           cd scripts
+          chmod +x *
           ./outside-collaborators-handler.rb
       
